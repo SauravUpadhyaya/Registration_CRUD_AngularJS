@@ -31,10 +31,10 @@ export class EmployeeListComponent implements OnInit {
 
       list => {
         let array=list.map(item => { 
-         // let departmentName = this.departmentService.getDepartmentName(item.payload.val()['department']);
+         let departmentName = this.departmentService.getDepartmentName(item.payload.val()['department']);
           return {
             $key:item.key,
-           // departmentName: departmentName,
+           departmentName: departmentName,
             ...item.payload.val()
           };
 
